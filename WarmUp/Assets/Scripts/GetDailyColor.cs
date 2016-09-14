@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class GetDailyColor : GetColor {
 
-	public override int GetSpriteColor(){
-		return 0;
+	public void Start(){
+
+		int dayOfYear = DateTime.Now.DayOfYear;
+
+		UnityEngine.Random.InitState(dayOfYear);
 	}
 
 }
